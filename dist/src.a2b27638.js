@@ -3929,8 +3929,8 @@ var _animateEs = require("./animate.es.js");
 "use strict";
 
 var _motion = require("motion");
-(0, _motion.inView)("section", function (info) {
-  var controls = (0, _motion.animate)(info.target.querySelector("span"), {
+(0, _motion.inView)("span", function (info) {
+  var controls = (0, _motion.animate)(info.target, {
     opacity: 1
   }, {
     duration: 1
@@ -3940,10 +3940,10 @@ var _motion = require("motion");
   return function (leaveInfo) {
     console.log("leaves", leaveInfo);
     controls.stop();
-    leaveInfo.target.querySelector("span").style.opacity = 0;
+    leaveInfo.target.style.opacity = 0;
   };
 }, {
-  margin: "0px 0px -50% 0px"
+  margin: "-25% 0px -50% 0px"
 });
 },{"motion":"node_modules/motion/dist/main.es.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -3970,7 +3970,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62589" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62787" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

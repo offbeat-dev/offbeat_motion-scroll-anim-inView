@@ -1,10 +1,10 @@
 import { inView, animate } from "motion";
 
 inView(
-  "section",
+  "span",
   (info) => {
     const controls = animate(
-      info.target.querySelector("span"),
+      info.target,
       {
         opacity: 1,
       },
@@ -15,8 +15,8 @@ inView(
     return (leaveInfo) => {
       console.log("leaves", leaveInfo);
       controls.stop();
-      leaveInfo.target.querySelector("span").style.opacity = 0;
+      leaveInfo.target.style.opacity = 0;
     };
   },
-  { margin: "0px 0px -50% 0px" }
+  { margin: "-25% 0px -50% 0px" }
 );
